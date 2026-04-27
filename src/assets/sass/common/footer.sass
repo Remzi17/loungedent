@@ -1,0 +1,217 @@
+.footer
+	+adap('padding-block', 70, 40)
+	margin-top: -40px
+
+	background: $gray
+	+adap('border-top-left-radius', 50, 28)
+	+adap('border-top-right-radius', 50, 28)
+
+	&__wrapper
+		display: flex
+		align-items: start
+		justify-content: space-between
+		flex-wrap: wrap
+		+adap('margin-bottom', 55, 20)
+		gap: 20px
+
+	&__item 
+		display: grid
+		+adap('gap', 24, 16)
+
+		&-title
+			+adap('font-size', 22, 18)
+			font-weight: 700
+
+		&-list
+			display: grid
+			grid-template-columns: repeat(2, max-content)
+			+adap('column-gap', 50, 20)
+			margin-bottom: -15px
+
+			li
+				margin-bottom: 15px
+				break-inside: avoid
+			
+			a
+				+hov
+					color: $active
+
+		&-content 
+			display: grid
+			gap: 12px
+
+	&__bottom
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 12px
+		flex-wrap: wrap
+
+		font-size: 14px
+		line-height: 1
+		color: #8d8d8d
+
+	&__link 
+		text-decoration: underline
+		text-decoration-skip-ink: none
+		text-decoration-color: $active
+		text-underline-offset: 3px
+		+t 
+
+		+hov
+			color: $active
+
+
+	@media (max-width: 1300px)
+		&__item 
+			&-list 
+				&:not(:has(>*:nth-child(12)))
+					grid-template-columns: 100%		
+
+	@media (max-width: 1199px)
+		&__wrapper
+			display: grid
+			grid-template-columns: repeat(2, auto)
+			justify-items: start
+
+		&__item 
+			&:nth-child(2)
+				@media (min-width: 768px)
+					grid-row: span 2
+
+	@media (max-width: 767px)
+		&__item 
+			&:nth-child(1)
+				grid-column: 1/-1
+
+	@media (max-width: 575px)
+		&__wrapper
+			grid-template-columns: 100%
+
+		&__item 
+			gap: 8px
+
+			&-list 
+				grid-template-columns: 100%
+
+				li 
+					margin-bottom: 8px
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

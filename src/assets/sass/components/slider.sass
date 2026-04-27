@@ -1,0 +1,137 @@
+
+.slider 
+	position: relative
+
+	&:has(.hover-translate)
+		.swiper 
+			padding-block: 12px
+			margin-block: -12px
+
+	&__top 
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 12px
+
+	&__navigation
+		display: flex
+		align-items: center
+		gap: 10px
+
+	&__arrow 
+		display: flex
+		align-items: center
+		justify-content: center
+		+adap('width', 70, 40)
+		+adap('height', 60, 32)
+
+		border: 1px solid $active
+		background: $active
+		border-radius: 150px
+		+t 
+
+		+hov
+			svg 
+				scale: 1.15
+
+		svg 
+			+adap('width', 19, 16)
+			+adap('height', 19, 16)
+
+			fill: #fff
+			stroke: #fff
+			stroke-width: 2.4px
+
+		&.swiper-button-disabled
+			border-color: #dedde9 
+			background: #fff 
+
+			svg 
+				stroke: #dedde9 
+
+	
+.swiper
+	+t
+
+	&-pagination
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		row-gap: 4px 
+		+adap('column-gap', 12, 8)
+		width: 100%
+
+		+adap('margin-top', 40, 20)
+
+		&-bullet
+			+adap('width', 24, 20)
+			+adap('height', 4, 3)
+
+			+adap('border-radius', 4, 2)
+			background: $gray
+			cursor: pointer
+			+t
+
+			&-active
+				background: $active
+
+				&:only-child
+					display: none
+
+		&-lock 
+			display: none
+
+	&-button-lock 
+		display: none
+
+	&-wrapper 
+		display: grid
+		grid-auto-flow: column
+		justify-content: start
+
+	&-slide 
+		display: grid
+		grid-template-columns: 100%
+
+	&-scrollbar 
+		width: 100%
+		height: 4px
+		margin-top: 12px
+
+		background: $gray 
+		cursor: pointer
+		overflow: hidden
+
+		&-drag
+			background: $active
+
+html
+	&:not(.loaded)
+		.swiper
+			opacity: 0 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

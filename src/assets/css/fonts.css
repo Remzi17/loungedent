@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Geologica';
+  src: url('../fonts/Geologica-Bold.woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geologica';
+  src: url('../fonts/Geologica-Light.woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+

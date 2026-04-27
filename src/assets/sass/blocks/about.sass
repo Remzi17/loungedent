@@ -1,0 +1,127 @@
+.about
+	&__title 
+		margin-bottom: 24px
+
+	&__row 
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		flex-wrap: wrap
+		+adap('gap', 24, 16)
+		+adap('margin-bottom', 44, 24)
+
+	&__text 
+		flex: 1 0 600px
+		max-width: 1320px
+		display: grid
+		+adap('gap', 24, 16)
+
+		+adap('font-size', 22, 16)
+
+	&__wrapper
+		position: relative
+
+		display: grid
+		grid-template-columns: 1fr 26%
+		gap: 12px
+		align-items: start
+		+adap('padding-left', 100, 20)
+
+		background: #fff
+		+adap('border-radius', borderRadius(550, 1770, 300), 40)
+
+	&__items
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		// grid-template-columns: repeat(3, minmax(auto,max-content))
+		gap: 20px
+		align-items: start
+		max-width: 1230px
+
+	&__item 
+		position: relative
+
+		display: grid
+		gap: 16px
+		+adap('padding-block', 80, 20)
+
+		&:before
+			content: ''
+
+			position: absolute
+			left: 0
+			top: 0
+			translate: 0 -50%
+
+			+adap('width', 20, 12)
+			+adap('height', 20, 12)
+
+			border-radius: 50%
+			background: $active
+
+		&-number 
+			font-weight: 700
+			+adap('font-size', 80, 32)
+			line-height: 0.8
+			white-space: nowrap
+
+			&_accent 
+				color: $active
+
+		&-title 
+			+adap('font-size', 22, 16)
+			line-height: 1.3
+
+	&__img 
+		position: absolute
+		+adap('right', 140, 20, $widthTo: 1200, $save: true)
+		bottom: 0
+		width: auto
+		+adap('height', 370, 120, 1 , $min: true)
+
+
+	@media (max-width: 991px)
+		&__wrapper
+			grid-template-columns: repeat(auto-fill, minmax(max(40%, 230px), 1fr))
+			+adap('padding', 40, 20, 991)
+			gap: 28px 20px
+
+		&__items 
+			display: contents
+
+		&__item 
+			padding: 0
+
+			&:before
+				position: static
+				translate: 0 0
+
+			&-title 
+				br
+					display: none
+
+		&__img 
+			position: static
+
+		&__text 
+			flex-basis: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

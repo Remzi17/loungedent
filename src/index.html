@@ -1,0 +1,324 @@
+@@include('assets/html/head.html', {
+"class" : '"home"'
+})
+
+<!-- Баннер -->
+<div class="header-main">
+	<div class="container">
+		<div class="slider header-main__slider">
+			<div class="swiper header-main-container">
+				<div class="swiper-wrapper">
+					<!-- not format -->
+					@@for(var i = 0; i < 2; i++){
+						<div class="swiper-slide">
+							<div class="header-main__item">
+								<div class="header-main__wrapper">
+									<div class="tag tag_accent header-main__tag">До 31.03.2026</div>
+									<h1 class="title header-main__title">
+										Профессиональная чистка зубов <br>
+										<span> 7 500 ₽</span>
+									</h1>
+									<div class="header-main__text">
+										Удаление зубного налета, камней и рекомендации по уходу за зубами. Ощутите чистоту и заботу о здоровье ваших зубов!
+									</div>
+									<button class="button" type="button" data-modal="modal-call">Получить консультацию</button>
+								</div>
+								<div class="header-main__right">
+									<picture class="">
+										<source srcset="assets/img/default.webp" media="(max-width: 991px)">
+										<img src="assets/img/header/1.webp" class="header-main__img" width="441" height="597" alt="" loading="eager"
+										fetchpriority="high" decoding="async"> 
+									</picture>
+								</div>
+							</div>
+						</div>
+					}
+				</div>
+				<div class="swiper-pagination slider__pagination header-main__pagination show-md"></div>
+				<div class="swiper-navigation slider__navigation header-main__navigation hide-md">
+					<button class="slider__arrow slider__prev header-main__prev header-main__arrow" type="button">
+						<svg class="prev-icon" aria-hidden="true">
+							<use xlink:href="assets/img/sprite.svg#prev"></use>
+						</svg>
+					</button>
+					<button class="slider__arrow slider__next header-main__next header-main__arrow" type="button">
+						<svg class="next-icon" aria-hidden="true">
+							<use xlink:href="assets/img/sprite.svg#next"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Преимущества -->
+<section id="features" class="section features">
+	<div class="container">
+		<div class="section__top">
+			<h2 class="title-2">Стоматология в Москве <span>ЛаунжДент</span></h2>
+		</div>
+		<div class="features__wrapper">
+			<div class="wow fadeIn features__item" data-wow-delay='.2s'>
+				<div class="features__item-left">
+					<img src="assets/img/features/1.webp" class="features__item-img" width="198" height="242" alt="" loading="eager"  
+					fetchpriority="high" decoding="async">
+				</div>
+				<div class="features__item-right"> 
+					<a href="javascript:void(0)" class="title-3 features__item-title">Имплантация под ключ за 1 день</a>
+					<p class="features__item-text">Восстановление улыбки с установкой лучших имплантов по современным протоколам.</p>
+				</div>
+			</div>
+			<div class="wow fadeIn features__item" data-wow-delay='.3s'>
+				<div class="features__item-left">
+					<img src="assets/img/features/2.webp" class="features__item-img" width="198" height="242" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-right">
+					<a href="javascript:void(0)" class="title-3 features__item-title">Протезирование любой сложности</a>
+					<p class="features__item-text">Изготовление ортопедических изделий из премиальных материалов.</p>
+				</div>
+			</div>
+			<div class="wow fadeIn features__item" data-wow-delay='.4s'>
+				<div class="features__item-left">
+					<img src="assets/img/features/3.webp" class="features__item-img" width="198" height="242" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-right">
+					<a href="javascript:void(0)" class="title-3 features__item-title">Все виды хирургического и терапевтического лечения</a>
+					<p class="features__item-text">Терапия кариеса, отбеливание, удаление зубов.</p>
+				</div>
+			</div>
+			<div class="wow fadeIn features__item features__item_accent" data-wow-delay='.5s'>
+				<div class="features__item-left">
+					<img src="assets/img/features/4.webp" class="features__item-img" width="198" height="242" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-right">
+					<a href="javascript:void(0)" class="title-3 features__item-title">Получите бесплатную консультацию</a>
+					<p class="features__item-text">И получи рекомендации по дальнейшему лечению</p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</section>
+
+
+<!-- О компании -->
+<section id="about" class="section section_gray about">
+	<div class="container">
+		<h2 class="title-2 about__title">Только лучшее качество</h2>
+		<div class="about__row">
+			<div class="about__text">
+				<p>Откройте для себя стоматологию нового уровня, где высокое качество услуг сочетается с доступными ценами! Мы уверены: забота о здоровье и красоте вашей улыбки должна быть не только эффективной, но и комфортной для вашего бюджета. Ваша улыбка — наша гордость!
+				</p>
+
+				<p>Запишитесь на консультацию и убедитесь, что стоматология премиум-класса может быть доступной для каждого.</p>
+			</div>
+			<button class="button" type="button" data-modal="modal-call">Получить консультацию</button>
+		</div>
+		<div class="about__wrapper">
+			<div class="about__items">
+				<div class="about__item">
+					<div class="about__item-number">
+						<span data-digits-counter>15</span> лет
+					</div>
+					<p class="about__item-title">средний стаж наших <br> врачей</p>
+				</div>
+				<div class="about__item">
+					<div class="about__item-number">
+						<span data-digits-counter>16 000</span>
+					</div>
+					<p class="about__item-title">человек получили <br> красивую улыбку</p>
+				</div>
+				<div class="about__item">
+					<div class="about__item-number about__item-number_accent">
+						<span data-digits-counter>80 000</span>
+					</div>
+					<p class="about__item-title">имплантов установили <br> к 2025 году</p>
+				</div>
+			</div>
+			<img src="assets/img/about/1.webp" class="about__img" width="317" height="370" alt="" loading="lazy" decoding="async">
+		</div>
+	</div>
+</section>
+
+<!-- Направления -->
+<section class="section services">
+	<div class="container">
+		<div class="section__top">
+			<h2 class="title-2">Направления клиники</h2>
+		</div>
+		@@include("assets/html/services.html", {
+		"animation" : true
+		})
+	</div>
+</section>
+
+@@include("assets/html/form.html", {
+"title" : "Составить план лечения"
+})
+
+<!-- Отзывы -->
+<section id="feedback" class="section slider feedback">
+	<div class="container">
+		<div class="section__top slider__top">
+			<h2 class="title-2">Отзывы пациентов</h2>
+			<div class="swiper-navigation slider__navigation feedback__navigation">
+				<button class="slider__arrow slider__prev feedback__prev feedback__arrow" type="button">
+					<svg class="prev-icon" aria-hidden="true">
+						<use xlink:href="assets/img/sprite.svg#prev"></use>
+					</svg>
+				</button>
+				<button class="slider__arrow slider__next feedback__next feedback__arrow" type="button">
+					<svg class="next-icon" aria-hidden="true">
+						<use xlink:href="assets/img/sprite.svg#next"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="swiper feedback-container">
+			<div class="swiper-wrapper">
+				<!-- not format -->
+					@@for(var i = 0; i < 3; i++){ <div class="swiper-slide">
+						<div class="hover-translate feedback__item" itemscope itemtype="https://schema.org/Review">
+							<div class="feedback__item-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+								<span class="feedback__item-name" itemprop="name">Александра Смирнова</span>
+								<span class="feedback__item-age">32 года</span>
+							</div>
+							<div class="feedback__item-text" itemprop="reviewBody">
+								Получила новую улыбку за неделю и счастлива! В эту стоматологию попала по рекомендации и не прогадала — врачи профессионалы, оборудование самое новое, цены — блеск! Всем искренне советую стоматологию, где свою работу делают качественно и на совесть!
+							</div>
+							<div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Dentist">
+								<meta itemprop="name" content="Название стоматологии">
+							</div>
+							<time class="tag" itemprop="datePublished" datetime="2026-04-05">
+								05.04.2026 г.
+							</time>
+						</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="hover-translate feedback__item" itemscope itemtype="https://schema.org/Review">
+						<div class="feedback__item-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+							<span class="feedback__item-name" itemprop="name">Максим Эдуардович</span>
+							<span class="feedback__item-age" itemprop="age" content="66">66 лет</span>
+						</div>
+						<div class="feedback__item-text" itemprop="reviewBody">
+							Очень понравилась стоматология, оснащение, доктора. С супругой сделали здесь имплантацию все на 4 и все на 6 после длительного ношения съемных протезов. Все, чего боялись, нас обошло стороной, приемлемые цены, быстрая работа, полное сопровождение врачами. А главное — пожизненная гарантия на импланты.
+						</div>
+						<div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Dentist">
+							<meta itemprop="name" content="Название стоматологии">
+						</div>
+						<time class="tag" itemprop="datePublished" datetime="2026-04-05">
+							05.04.2026 г.
+						</time>
+					</div>
+				</div>
+				}
+			</div>
+		</div>
+		<div class="swiper-pagination slider__pagination feedback__pagination show-md"></div>
+	</div>
+	</section>
+
+	<!-- Частые вопросы -->
+	<section class="section faq">
+		<div class="container">
+			<div class="section__top">
+				<h2 class="title-2">Частые вопросы</h2>
+			</div>
+			<div class="faq__wrapper" data-spollers data-one-spoller>
+				<div class="faq__item" data-spoller data-open>
+					<button class="faq__item-title" type="button" data-spoller-title>
+						Чем отличается имплантация от протезирования?
+						<span class="faq__item-button"></span>
+					</button>
+					<div class="faq__item-content" data-spoller-content>
+						<div class="faq__item-text">Имплантация — это установка искусственного корня (имплантата) в кость для замещения потерянного зуба. После приживления на него устанавливают коронку. Протезирование — это создание искусственных зубов (например, мосты, съёмные протезы), которые крепятся к оставшимся зубам или имплантам. В отличие от имплантов, протезы не требуют внедрения в кость.</div>
+					</div>
+				</div>
+				<div class="faq__item" data-spoller>
+					<button class="faq__item-title" type="button" data-spoller-title>
+						Ортодонт и стоматолог-ортопед: в чем разница?
+						<span class="faq__item-button"></span>
+					</button>
+					<div class="faq__item-content" data-spoller-content>
+						<div class="faq__item-text">Имплантация — это установка искусственного корня (имплантата) в кость для замещения потерянного зуба. После приживления на него устанавливают коронку. Протезирование — это создание искусственных зубов (например, мосты, съёмные протезы), которые крепятся к оставшимся зубам или имплантам. В отличие от имплантов, протезы не требуют внедрения в кость.</div>
+					</div>
+				</div>
+				<div class="faq__item" data-spoller>
+					<button class="faq__item-title" type="button" data-spoller-title>
+						Пульпит: что представляет собой заболевание?
+						<span class="faq__item-button"></span>
+					</button>
+					<div class="faq__item-content" data-spoller-content>
+						<div class="faq__item-text">Имплантация — это установка искусственного корня (имплантата) в кость для замещения потерянного зуба. После приживления на него устанавливают коронку. Протезирование — это создание искусственных зубов (например, мосты, съёмные протезы), которые крепятся к оставшимся зубам или имплантам. В отличие от имплантов, протезы не требуют внедрения в кость.</div>
+					</div>
+				</div>
+				<div class="faq__item" data-spoller>
+					<button class="faq__item-title" type="button" data-spoller-title>
+						Как устанавливают импланты?
+						<span class="faq__item-button"></span>
+					</button>
+					<div class="faq__item-content" data-spoller-content>
+						<div class="faq__item-text">Имплантация — это установка искусственного корня (имплантата) в кость для замещения потерянного зуба. После приживления на него устанавливают коронку. Протезирование — это создание искусственных зубов (например, мосты, съёмные протезы), которые крепятся к оставшимся зубам или имплантам. В отличие от имплантов, протезы не требуют внедрения в кость.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Новости -->
+	<section id="news" class="section slider news">
+		<div class="container">
+			<div class="section__top slider__top">
+				<h2 class="title-2">Новости</h2>
+				<div class="swiper-navigation slider__navigation news__navigation">
+					<button class="slider__arrow slider__prev news__prev news__arrow" type="button">
+						<svg class="prev-icon" aria-hidden="true">
+							<use xlink:href="assets/img/sprite.svg#prev"></use>
+						</svg>
+					</button>
+					<button class="slider__arrow slider__next news__next news__arrow" type="button">
+						<svg class="next-icon" aria-hidden="true">
+							<use xlink:href="assets/img/sprite.svg#next"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="swiper news-container">
+				<div class="swiper-wrapper">
+					<!-- not format -->
+				@@for(var i = 0; i < 3; i++){ <div class="swiper-slide">
+					<article class="news__item">
+						<a href="javascript:void(0)" class="news__item-link">
+							<img src="assets/img/news/1.webp" class="news__item-img" width="420" height="250" alt="" loading="lazy" decoding="async">
+						</a>
+						<span class="news__item-content">
+							<time class="tag news__item-date" datetime="2026-04-05">05.04.2026 г.</time>
+							<a href="javascript:void(0)" class="hover-active news__item-title">Имплантация all-on-4</a>
+							<span class="news__item-text">Как быстро и безопасно восстановить зубной ряд?</span>
+						</span>
+					</article>
+			</div>
+			<div class="swiper-slide">
+				<article class="news__item">
+					<a href="javascript:void(0)" class="news__item-link">
+						<img src="assets/img/news/2.webp" class="news__item-img" width="420" height="250" alt="" loading="lazy" decoding="async">
+					</a>
+					<span class="news__item-content">
+						<time class="tag news__item-date" datetime="2026-04-05">05.04.2026 г.</time>
+						<a href="javascript:void(0)" class="hover-active news__item-title">Сколько стоит вставить зубы?</a>
+						<span class="news__item-text">Методы протезирования и цены</span>
+					</span>
+				</article>
+			</div>
+			}
+		</div>
+	</div>
+	<div class="swiper-pagination slider__pagination news__pagination show-md"></div>
+	</div>
+</section>
+
+@@include("assets/html/form.html", {
+"title" : "Остались вопросы?"
+})
+
+@@include('assets/html/foot.html')

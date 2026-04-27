@@ -1,0 +1,137 @@
+.features
+	&__wrapper
+		display: grid
+		grid-template-columns: repeat(auto-fill, minmax(max(40%, 700px), 1fr))
+		+adap('gap', 20, 16)
+
+	&__item 
+		position: relative
+
+		display: grid
+		grid-template-columns: auto 1fr 
+		+adap('gap', 36, 16)
+		+adap('padding-block', 30, 16)
+		+adap('padding-left', 30, 16)
+		+adap('padding-right', 90, 16)
+
+		background: $gray
+		+adap('border-radius', borderRadius(550, 870, 300), 28)
+
+		+hov
+			.features__item
+				&-title 
+					color: $active
+
+				&-text 
+					&:after
+						content: ''
+						translate: 3px -3px
+
+
+		&-left 
+			position: relative
+
+			background: #Fff
+			+adap('border-radius', borderRadius(150, 350, 240), 28)
+			aspect-ratio: 350/240
+			+adap('width', 350, 200  , $widthTo: 1200, $save: true)
+
+			overflow: hidden
+
+		&-img 
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+
+			object-fit: contain
+
+		&-right 
+			display: grid
+			grid-template-rows: 1fr auto
+			+adap('gap', 20, 16)
+			+adap('padding-block', 20, 8)
+
+		&-title 
+			&:after
+				content: ''
+				position: absolute
+				inset: 0
+				+adap('border-radius', borderRadius(550, 870, 300), 28)
+
+			@media (max-width: 767px)
+				line-height: 1.15  
+
+		&-text 
+			display: flex
+			align-items: flex-end
+			+adap('gap', 24, 16)
+
+			&:after
+				content: ''
+
+				flex-shrink: 0
+				+adap('flex-basis', 50, 24)
+				+adap('height', 40, 20)
+				+adap('border-radius', 100, 40)
+
+				background: $active url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.883911 13.25L12.8839 1.25M12.8839 1.25H0.883911M12.8839 1.25V13.25' stroke='white' stroke-width='2.5' /%3E%3C/svg%3E") center / 30% no-repeat
+
+				+t 
+
+		&_accent
+			background: $active
+			color: #fff
+
+			+hov
+				.features__item-title 
+					color: #fff
+					text-decoration-color: #fff
+
+			.features__item
+				&-title 
+					text-decoration: underline
+					text-decoration-skip-ink: none
+					text-decoration-color: transparent
+					+t 
+
+				&-text 
+					&:after
+						background-color: $bg
+
+
+	@media (max-width: 767px)
+		&__wrapper
+			grid-template-columns: 100%
+		
+		&__item 
+			&-right 
+				padding-block: 0px
+
+	@media (max-width: 575px)
+		&__item 
+			grid-template-columns: 100%
+
+	@media (max-width: 430px)
+		&__item
+			&-left
+				width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

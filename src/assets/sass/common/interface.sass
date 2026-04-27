@@ -1,0 +1,349 @@
+body 
+	+adap('font-size', 18, 16)
+	font-weight: 300
+
+	@media (max-width: 360px)
+		hyphens: auto	
+
+		@supports (-webkit-hyphens: none)
+			word-break: break-word
+	
+	
+.section
+	+adap('padding-block', $section_gap, math.div($section_gap, 2))
+	+adap('border-top-left-radius', 50, 28)
+	+adap('border-top-right-radius', 50, 28)
+
+	&:not(:is(.section_accent, .section_gray))+.section:not(:is(.section_accent, .section_gray))
+		padding-top: 0
+
+	&-big
+		+adap('padding-block', $section_gap, 40)
+
+	&__top 
+		+adap('margin-bottom', 40, 32)
+
+	&_gray
+		background: $gray
+
+	&_accent
+		background: $active
+
+		color: #fff
+
+
+
+.title 
+	+title
+
+	&-2
+		+title-2
+		
+		span 
+			color: $active
+
+	&-3
+		+title-3
+
+	&-4
+		+title-4
+
+	
+.button 
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 12px
+	padding: em(4) em(10+60+12) em(4) em(24)
+	+adap('min-height', 60, 48)
+	
+	// background: $bg
+	border-radius: 100px
+
+	color: #fff
+	white-space: nowrap
+	line-height: 1
+	+t
+
+	&_small 
+		+adap('min-height', 50, 48)
+
+	&:after
+		content: ''
+
+		position: absolute
+		right: 10px
+		top: 50%
+		translate: 0 -50%
+
+		width: em(50)
+		height: em(40)
+
+		border-radius: 100px
+		background: $active url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.883911 13.25L12.8839 1.25M12.8839 1.25H0.883911M12.8839 1.25V13.25' stroke='white' stroke-width='2.5' /%3E%3C/svg%3E") center / 30% no-repeat
+		+t
+
+
+.link
+	text-decoration: underline
+	text-decoration-skip-ink: none
+	text-underline-offset: 1px
+	text-decoration-color: $active
+	+t
+
+	+hov
+		color: $active
+
+.tag 
+	+adap('margin-bottom', 20, 12)
+	+adap('padding-block', 8, 4)
+	+adap('padding-inline', 20, 12)
+				
+	border: 1px solid #dedde9
+	border-radius: 150px
+
+	line-height: 1
+	+adap('font-size', 18, 14)
+
+	&_accent
+		background: $active
+		color: #fff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+

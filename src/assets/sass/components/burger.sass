@@ -1,0 +1,60 @@
+$burgerWidth: 32px
+$burgerHeight: 24px
+$burgerLineOffset: 6 
+$burgerLineHeight: 2px
+$burgerColor: $active
+	
+.menu
+	&-link
+		position: relative
+		order: 10 
+ 
+		flex-shrink: 0 
+		+adap('width', 50, 32) 
+		+adap('height', 40, 32) 
+
+		background: #fff 
+		+adap('border-radius', borderRadius(150, 50, 40), 24)
+
+		@media (min-width: #{$burgerMedia+1+px})
+			display: none
+
+		&.active
+			.menu-lines
+				background: transparent
+
+				&:after
+					top: 0
+					rotate: -135deg
+
+				&:before
+					top: 0
+					rotate: 135deg
+
+	&-lines,
+	&-lines:before,
+	&-lines:after
+		position: absolute
+		right: 50%
+		width: 20px
+		height: 2px
+
+		background-color: $burgerColor
+		transition: 0.4s
+		pointer-events: none
+
+	&-lines
+		top: 50%
+		translate: 50% -50%
+
+		&:before
+			content: ''
+			translate: 50% 0
+			top: #{$burgerLineOffset*-1+px}
+
+		&:after
+			content: ''
+			translate: 50% 0
+			top: #{$burgerLineOffset+px}
+
+	

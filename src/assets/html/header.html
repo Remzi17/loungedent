@@ -1,0 +1,55 @@
+<header class="header">
+	<div class="header-fixed">
+		<div class="header__top-wrapper">
+			<div class="container">
+				<div class="header__top" data-da=".header__mobile,767,2">
+					<div class="header__left">
+						<div class="header__address">Москва, ул. Советская, д. 150</div>
+						<div class="header__time">Ежедневно с 09:00 – 21:00</div>
+					</div>
+					<div class="header__right">
+						<a href="tel:+74950000000" class="hover-active header__tel">+7 (495) 000-00-00</a>
+						<button class="link" type="button" data-modal="modal-call">Заказать звонок</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__bottom-wrapper">
+			<div class="container">
+				<div class="header__bottom">
+					<a href="/" class="logo header__logo">
+						<img src="assets/img/logo.svg" width="248" height="60" alt="" loading="lazy" decoding="async">
+					</a>
+					<button class="header__button" type="button" aria-expanded="false" aria-controls="services-menu" data-da=".header__mobile,991,0">
+						<span class="menu-link">
+							<span class="menu-lines"></span>
+						</span>
+						<span>Все услуги</span>
+					</button>
+					<div class="services header__services" id="services-menu" hidden>
+						@@include("services.html", {
+						"animation" : false
+						})
+					</div>
+					<div class="header__mobile">
+						<nav class="nav header__nav">
+							<ul class="menu header__menu">
+								<li><a href="javascript:void(0)">Прайс-лист</a></li>
+								<li><a href="javascript:void(0)">Калькулятор</a></li>
+								<li><a href="#about">О нас</a></li>
+								<li><a href="javascript:void(0)">Врачи</a></li>
+								<li><a href="#news">Блог</a></li>
+								<li><a href="#feedback">Отзывы</a></li>
+								<li><a href="javascript:void(0)">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<button class="button button_small header__callback" type="button" data-modal="modal-call">Запись на прием</button>
+					<button class="menu-link header__burger">
+						<span class="menu-lines"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

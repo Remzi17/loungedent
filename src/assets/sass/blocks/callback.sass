@@ -1,0 +1,65 @@
+.callback
+	&__wrapper
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		gap: 20px
+
+	&__img
+		height: auto
+		+adap('border-radius', borderRadius(550, 450, 330), 40)
+		min-width: 290px
+		object-fit: contain
+
+	&__right 
+		flex: 0 1 1170px
+
+	&__title 
+		+adap('margin-bottom', 20, 16)
+
+	&__subtitle
+		+adap('margin-bottom', 35, 16)
+		+adap('font-size', 22, 16)
+
+	&__form 
+		.form
+			&__fields 
+				display: grid
+				grid-template-columns: repeat(3, 1fr)
+
+		.checkbox 
+			margin-top: 16px
+
+
+	@media (max-width: 991px)
+		&__form 
+			.form
+				&__fields
+					grid-template-columns: 100%
+
+	@media (max-width: 767px)
+		&__wrapper
+			display: grid
+			grid-template-columns: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

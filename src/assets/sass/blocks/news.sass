@@ -1,0 +1,61 @@
+.news
+	&__item 
+		display: grid
+		grid-template-rows: auto 1fr 
+		align-items: start
+
+		border: 1px solid #dedde9
+		+adap('border-radius', 50, 28)	
+		overflow: hidden
+
+		&-link  
+			+hov
+				.news__item-img
+					scale: 1.01
+			
+		&-img 
+			width: 100%
+			height: auto
+			aspect-ratio: 420/250
+			object-fit: cover
+			+t
+
+		&-content
+			display: grid
+			justify-items: start
+			+adap('padding', 30, 16)
+
+		&-title 
+			margin-bottom: 12px
+
+			font-weight: 700
+			+adap('font-size', 22, 18)
+
+
+	@media (max-width: 575px)
+		.swiper-slide 
+			width: auto !important
+
+		&__item 
+			min-width: 280px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

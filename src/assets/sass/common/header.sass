@@ -1,0 +1,353 @@
+.header 
+	position: sticky
+	left: 0
+	top: 0
+	z-index: 10
+ 
+	width: 100%
+	will-change: transform
+	background: #fff
+
+	&__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 12px
+		padding-block: 12px
+
+		font-size: 14px
+		color: #8d8d8d
+		line-height: 1
+
+		&-wrapper
+			border-bottom: 1px solid #dedde9
+
+	&__left 
+		display: flex
+		align-items: center
+
+		&>*
+			&:not(:last-child)
+				margin-right: 8px
+				padding-right: 8px
+
+				border-right: 1px solid $active
+
+	&__logo 
+		img 
+			+adap('width', 240, minusPercent(40, 240), $widthTo: 1200)
+			+adap('height', 60, minusPercent(40, 60)  , $widthTo: 1200)
+
+	&__right 
+		display: flex
+		align-items: center
+		+adap('gap', 40, 20)
+
+	&__bottom 
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+adap('gap', 40, 12, $widthTo: 1200, $save: true)
+		padding-block: 16px
+
+		+adap('font-size', 18, 16  , $widthTo: 1200)
+
+	&__button 
+		display: flex
+		align-items: center
+		gap: 12px
+		+adap('min-height', 50, 48)
+
+		padding: em(4) em(24) em(4) em(4)
+
+		background: $active
+		border-radius: 100px
+
+		color: #fff
+
+		.menu-link
+			display: block
+			order: -1
+
+		&.active
+			.menu-lines
+				background: transparent
+
+				&:after
+					top: 0
+					rotate: -135deg
+
+				&:before
+					top: 0
+					rotate: 135deg
+
+		
+	&__mobile
+		flex: 1
+
+	&__menu 
+		display: flex
+		align-items: center
+		row-gap: 8px
+		+adap('column-gap', 40, 14  , $widthTo: 1200)
+		flex-wrap: wrap
+
+		&>li>a 
+			+hov
+				color: $active
+
+	&__burger 
+		&.menu-link
+			background: $gray
+
+	&__services 
+		position: absolute
+		z-index: 10
+		left: 0
+		top: 100%
+		translate: 0 -20px
+		+adap('padding-block', 50, 24)
+		+adap('padding-inline', 75, 16)
+		width: 100%
+		+scrollbar(calc(100dvh - var(--headerFixedHeight)), $scrollBarWidth: 6, $padding: 8) 
+
+		background: $gray
+		+adap('border-top-left-radius', 50, 28)
+		+adap('border-top-right-radius', 50, 28)
+
+		opacity: 0
+		pointer-events: none
+		overscroll-behavior: contain
+		+t
+
+		&.active 
+			translate: 0 0
+			opacity: 1
+			pointer-events: auto
+
+		.services__item
+			@media (max-width: 767px)
+				visibility: visible !important
+
+			&-img-wrapper 
+				background: #fff
+
+
+	@media (max-width: #{$burgerMedia+px})
+		$padding-top: 40
+		$padding-bottom: 40
+		$padding-x: 20
+		$mobile-bg: #fff
+ 
+		&__mobile
+			position: fixed
+			right: -100vw
+			top: var(--headerFixedHeight)
+			z-index: 5
+
+			display: grid
+			grid-template-columns: 100%
+			justify-items: start
+			align-content: start
+			gap: 20px
+			width: min(500px, 101vw)
+			padding: #{$padding-top+px} #{$padding-x+px} #{$padding-bottom+px}
+
+			background: $mobile-bg
+			border-bottom-left-radius: 24px
+
+			opacity: 0
+			transition: right .3s, opacity .3s
+			+scrollbar(100vh, $scrollBarWidth: 4, $padding: 0)
+			pointer-events: none
+
+			&.active
+				right: 0px 
+				opacity: 1
+				pointer-events: auto
+
+		&__nav
+			width: 100%
+
+		&__menu
+			display: grid
+			grid-template-columns: 100%
+			gap: 20px
+			width: 100%
+
+		&__bottom 
+			justify-content: flex-end
+			gap: 12px
+
+		&__logo 
+			margin-right: auto
+
+	@media (max-width: 991px)
+		&__button
+			order: -1
+
+		&__services
+			.services
+				&__wrapper
+					grid-template-columns: repeat(auto-fill, minmax(max(40%, 250px), 1fr))
+
+				&__item 
+					&-img-wrapper 
+						display: none
+
+	@media (max-width: 767px)
+		&__top,
+		&__left
+			flex-wrap: wrap
+			gap: 12px	
+
+	@media (max-width: 575px)
+		&__mobile
+			height: calc(100dvh - #{var(--headerFixedHeight)})
+
+		&__logo 
+			img 
+				+adap('width', minusPercent(30, 248), minusPercent(50, 248), 575)
+				+adap('height', minusPercent(30, 60), minusPercent(50, 60), 575)
+
+		&__callback 
+			padding: em(12) em(20)
+			min-height: auto
+
+			+adap('font-size', 16, 14, 575)
+
+			&:after
+				display: none
+
+
+
+
+
+
+.header-main 
+	position: relative
+
+	background: $gray
+
+	.container 
+		width: 100%
+
+	&__navigation
+		position: absolute
+		+adap('bottom', 96, 40)
+		+adap('right', 78, 20 )
+		z-index: 3
+
+	&__item 
+		+adap('padding-block', 100, 40)
+
+
+
+	&__wrapper
+		display: grid
+		justify-items: start
+		align-content: start
+		+adap('max-width', 740, 600)
+
+	&__tag
+		+adap('margin-bottom', 55, 20)
+
+	&__title 
+		margin-bottom: 16px	
+
+		span 
+			color: $active
+
+	&__text 
+		+adap('margin-bottom', 32, 16)
+		max-width: 580px
+
+		+adap('font-size', 22, 18)
+		line-height: 1.5
+
+	&__right 
+		position: absolute
+		left: 50%
+		bottom: 0
+		z-index: 1
+		translate: 20% 0
+
+		&:after
+			content: ''
+
+			position: absolute
+			left: 50%
+			top: 50%
+			z-index: -1
+
+			translate: -50% -50%
+			+adap('width', 570, minusPercent(50, 570))
+			+adap('height', 414, minusPercent(50, 414))
+
+			border-radius: 550px
+			background: #fff
+
+	&__img 
+		+adap('width', 470, minusPercent(50, 470))
+		+adap('height', 640, minusPercent(50, 640))
+
+	@media (max-width: 1300px)
+		&__right 
+			translate: 50% 0
+
+	@media (max-width: 991px)
+		padding-bottom: 24px
+
+		&__right 
+			display: none
+
+
+		&__pagination
+			position: absolute
+			bottom: 0
+			left: 50%
+			translate: -50% 0
+			margin-top: 0
+
+			.swiper-pagination-bullet
+				background: #fff
+
+				&-active 
+					background: $active
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

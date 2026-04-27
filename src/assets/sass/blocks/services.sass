@@ -1,0 +1,88 @@
+.services
+	&__wrapper
+		display: grid
+		grid-template-columns: repeat(auto-fill, minmax(430px, 1fr))
+		+adap('row-gap', 56, 28)
+		column-gap: 20px
+		align-items: start  
+
+		@media (max-width: 575px)
+			grid-template-columns: 100%
+
+	&__item 
+		display: grid
+		+adap('gap', 24, 12)
+		align-content: start
+		max-width: 456px
+
+		&-img-wrapper
+			display: flex
+			align-items: center
+			justify-content: center
+			max-width: 220px
+			+adap('padding', 26, 12)
+			+adap('min-height', 150, 80)
+
+			background: $gray 
+			+adap('border-radius', borderRadius(150, 220, 150), 40)
+
+			@media (max-width: 575px)
+				max-width: 100%
+
+		&-img 
+			max-width: 80%
+			max-height: 80%
+
+		&-title
+			font-weight: 700
+			+adap('font-size', 35, 20)
+			line-height: 1
+			+t 
+			
+			+hov
+				color: $active
+
+		&-tags 
+			display: flex
+			flex-wrap: wrap
+			+adap('gap', 10, 4)
+
+			li
+				position: relative
+				padding: em(8) em(20)
+
+				border-radius: 100px
+				border: 1px solid #dedde9
+
+				line-height: 1
+				+adap('font-size', 18, 14)
+				+t 
+
+				+hov
+					background: #dedde9
+				
+				@media (max-width: 575px)
+					padding-inline: em(12)
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

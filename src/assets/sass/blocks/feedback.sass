@@ -1,0 +1,54 @@
+.feedback
+	&__item
+		+adap('padding-block', 36, 20)
+		+adap('padding-inline', 32, 16)
+
+		border: 1px solid #dedde9
+		+adap('border-radius', 50, 28)
+
+		overflow: hidden
+
+		&-author 
+			display: grid
+			gap: 4px
+			margin-bottom: 16px
+
+		&-name
+			+adap('font-size', 22, 18)
+			font-weight: 700
+		
+		&-age
+			color: #8d8d8d
+
+		&-text 
+			+adap('margin-bottom', 112, 16)
+
+			line-height: 1.4
+
+	@media (max-width: 575px)
+		.swiper-slide 
+			width: auto !important
+
+		&__item 
+			min-width: 290px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
