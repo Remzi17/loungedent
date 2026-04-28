@@ -12,30 +12,55 @@ export const headerButton = document.querySelector(".header__button");
 export const headerServices = document.querySelector(".header__services");
 
 if (headerButton && headerServices) {
-  headerButton.addEventListener("click", function () {
-    const isOpen = this.classList.toggle("active");
+  let isAnimating = false;
+  let currentHandler = null;
 
+  headerButton.addEventListener("click", function () {
+    if (isAnimating) return;
+
+    const isOpen = !headerServices.classList.contains("active");
+    isAnimating = true;
+
+    this.classList.toggle("active", isOpen);
     this.setAttribute("aria-expanded", isOpen);
+
+    if (currentHandler) {
+      headerServices.removeEventListener("transitionend", currentHandler);
+      currentHandler = null;
+    }
 
     if (isOpen) {
       headerServices.removeAttribute("hidden");
+
       requestAnimationFrame(() => {
         headerServices.classList.add("active");
       });
 
-      const firstLink = headerServices.querySelector("a, button");
+      currentHandler = (e) => {
+        if (e.target !== headerServices) return;
 
+        headerServices.removeEventListener("transitionend", currentHandler);
+        currentHandler = null;
+        isAnimating = false;
+      };
+
+      headerServices.addEventListener("transitionend", currentHandler);
+
+      const firstLink = headerServices.querySelector("a, button");
       if (firstLink) firstLink.focus();
     } else {
       headerServices.classList.remove("active");
 
-      const onEnd = (e) => {
+      currentHandler = (e) => {
         if (e.target !== headerServices) return;
+
         headerServices.setAttribute("hidden", "");
-        headerServices.removeEventListener("transitionend", onEnd);
+        headerServices.removeEventListener("transitionend", currentHandler);
+        currentHandler = null;
+        isAnimating = false;
       };
 
-      headerServices.addEventListener("transitionend", onEnd);
+      headerServices.addEventListener("transitionend", currentHandler);
 
       this.focus();
     }

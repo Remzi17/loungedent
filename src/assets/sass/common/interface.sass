@@ -17,6 +17,21 @@ body
 	&:not(:is(.section_accent, .section_gray))+.section:not(:is(.section_accent, .section_gray))
 		padding-top: 0
 
+	&-top 
+		+adap('padding-top', $section_gap, math.div($section_gap, 2))
+ 
+	&-bottom 
+		+adap('padding-bottom', $section_gap, math.div($section_gap, 2))
+
+	&-small
+		+adap('padding-block', math.div($section_gap, 3), 16)
+
+		&-top 
+			+adap('padding-top', math.div($section_gap, 3), 16)   
+
+		&-bottom 
+			+adap('padding-bottom', math.div($section_gap, 3), 16)
+
 	&-big
 		+adap('padding-block', $section_gap, 40)
 

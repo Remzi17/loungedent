@@ -8,7 +8,9 @@
 		align-items: flex-start
 		flex-wrap: wrap
 		+adap('gap', 24, 16)
-		+adap('margin-bottom', 44, 24)
+ 
+		&:not(:last-child)
+			+adap('margin-bottom', 44, 24)
 
 	&__text 
 		flex: 1 0 600px

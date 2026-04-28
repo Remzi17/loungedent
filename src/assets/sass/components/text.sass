@@ -8,6 +8,12 @@
 	h1, h2, h3, b, strong
 		font-weight: 700
 
+	h1, h2, h3, h4, h5, h6
+		margin-bottom: .6em
+
+	h1
+		+title
+
 	h2
 		+title-2
 
@@ -17,20 +23,26 @@
 	h4
 		+title-4
 
+	h5
+		+title-5
+
+	h6
+		+title-6
+
 	p
 		&:not(:has(+ul,+ol))     
-			+adap('margin-bottom', 20, 12)
+			+adap('margin-bottom', 16, 12)
 
 		&:last-child
 			margin-bottom: 0 
 
 	// Списки 
-	$dots-size: 4
-	$dots-size-mobile: 4
+	$dots-size: 8
+	$dots-size-mobile: 6
 	$dots-gap: 16 // Отступ между маркером и текстом
 	$dots-gap-mobile: 12
 
-	$list-padding: 16 // Внешние отступы
+	$list-padding: 24 // Внешние отступы
 	$list-padding-mobile: 12
 
 	$li-gap: 16 // gap между li
@@ -121,6 +133,7 @@
 
 		+adap('font-size', 20, 16)
 		background: $gray 
+		+adap('border-radius', 32, 20)
 
 	.table
 		width: 100%
@@ -151,16 +164,16 @@
 				border-bottom-right-radius: 12px
 
 		thead
-			background: #000
+			background: $active
 			color: #fff
 	 
 		tbody 
 			tr
 				&:nth-child(even)
-					background: #ccc
+					background: $gray 
 
 				&:nth-child(odd)
-					background: #fafafa
+					background: #fff
 
 		&:not(:has(thead))
 			tbody 
